@@ -40,7 +40,7 @@ internal class GiftView : View
         try
         {
             var url = await _giftService.GetRandomUrlAsync(cancellationToken);
-            var link = new LinkTextToken("­", url);
+            var link = new LinkTextToken("\u00AD", url);
 
             var view = CreateBuilder()
                 .WithText(link).AddTextLine()

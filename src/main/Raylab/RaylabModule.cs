@@ -1,9 +1,9 @@
-using Microsoft.Extensions.DependencyInjection;
 using Kantaiko.Hosting.Modularity;
+using Microsoft.Extensions.DependencyInjection;
+using Raylab.Modules.Gifts;
 using Replikit.Abstractions.Adapters.Loader;
 using Replikit.Adapters.Telegram;
 using Replikit.Core.Modules;
-using Raylab.Modules.Gifts;
 
 namespace Raylab;
 

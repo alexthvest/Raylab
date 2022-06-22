@@ -1,5 +1,5 @@
-using Microsoft.Extensions.DependencyInjection;
 using Kantaiko.Hosting.Modularity;
+using Microsoft.Extensions.DependencyInjection;
 using Raylab.Modules.Gifts.Providers;
 using Raylab.Modules.Gifts.Providers.WaifuPics;
 using Raylab.Modules.Gifts.Services;
