@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{8BDF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raylab.Modules.Gifts", "src\modules\Raylab.Modules.Gifts\Raylab.Modules.Gifts.csproj", "{8F637E88-551A-4208-8B3A-D4012D5E6F81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raylab.Modules.Knucklebones", "src\modules\Raylab.Modules.Knucklebones\Raylab.Modules.Knucklebones.csproj", "{C5DA66E0-BEF5-4454-A4B4-D3B37A6B1598}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,11 +32,16 @@ Global
 		{8F637E88-551A-4208-8B3A-D4012D5E6F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F637E88-551A-4208-8B3A-D4012D5E6F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F637E88-551A-4208-8B3A-D4012D5E6F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5DA66E0-BEF5-4454-A4B4-D3B37A6B1598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5DA66E0-BEF5-4454-A4B4-D3B37A6B1598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5DA66E0-BEF5-4454-A4B4-D3B37A6B1598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5DA66E0-BEF5-4454-A4B4-D3B37A6B1598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1816DF01-26E4-4320-BE2B-BC6389D1FF5B} = {1D6661DD-2EC5-41DD-87EF-E0DEE3E88788}
 		{42FBC0BD-3F62-4D28-BFD0-6F42298B47F8} = {1816DF01-26E4-4320-BE2B-BC6389D1FF5B}
 		{8BDFED4B-89FA-4A97-8F00-233AA5D7EF9B} = {1D6661DD-2EC5-41DD-87EF-E0DEE3E88788}
 		{8F637E88-551A-4208-8B3A-D4012D5E6F81} = {8BDFED4B-89FA-4A97-8F00-233AA5D7EF9B}
+		{C5DA66E0-BEF5-4454-A4B4-D3B37A6B1598} = {8BDFED4B-89FA-4A97-8F00-233AA5D7EF9B}
 	EndGlobalSection
 EndGlobal

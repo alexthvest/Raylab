@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Replikit.Core" Version="1.0.0-alpha.5" />
+    <PackageReference Include="Replikit.Extensions.Views" Version="1.0.0-alpha.5" />
+    <PackageReference Include="Replikit.Extensions.State" Version="1.0.0-alpha.5" />
+  </ItemGroup>
+
+</Project>

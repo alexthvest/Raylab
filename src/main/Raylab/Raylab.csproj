@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\modules\Raylab.Modules.Gifts\Raylab.Modules.Gifts.csproj" />
+    <ProjectReference Include="..\..\modules\Raylab.Modules.Knucklebones\Raylab.Modules.Knucklebones.csproj" />
   </ItemGroup>
 
 </Project>
