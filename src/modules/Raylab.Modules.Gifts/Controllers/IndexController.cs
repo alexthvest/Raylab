@@ -17,6 +17,6 @@ internal class IndexController : Controller
     [Command("gift")]
     public async Task SendGift()
     {
-        await _viewManager.SendViewAsync<GiftView>(Channel.Id, CancellationToken);
+        await _viewManager.SendViewAsync<GiftView>(Channel.Id, Context.CancellationToken);
     }
 }

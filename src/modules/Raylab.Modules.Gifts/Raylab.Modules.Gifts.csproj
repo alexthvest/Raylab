@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Replikit.Core" Version="1.0.0-alpha.1" />
-    <PackageReference Include="Replikit.Extensions.Views" Version="1.0.0-alpha.1" />
-    <PackageReference Include="Replikit.Extensions.State" Version="1.0.0-alpha.1" />
+    <PackageReference Include="Replikit.Core" Version="1.0.0-alpha.5" />
+    <PackageReference Include="Replikit.Extensions.Views" Version="1.0.0-alpha.5" />
+    <PackageReference Include="Replikit.Extensions.State" Version="1.0.0-alpha.5" />
   </ItemGroup>
 
 </Project>

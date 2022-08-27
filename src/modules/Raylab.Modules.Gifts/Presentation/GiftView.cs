@@ -1,6 +1,5 @@
 ﻿using Raylab.Modules.Gifts.Services;
-using Replikit.Abstractions.Messages.Builder;
-using Replikit.Abstractions.Messages.Models.Tokens;
+using Replikit.Abstractions.Messages.Models.TextTokens;
 using Replikit.Extensions.State;
 using Replikit.Extensions.Views;
 
@@ -17,13 +16,12 @@ internal class GiftView : View
         _giftService = giftService;
     }
 
-    [Action]
     public void ChangeGiftState(GiftState state)
     {
         _state.Value.State = state;
     }
 
-    public override async Task<ViewResult> RenderAsync(CancellationToken cancellationToken)
+    public override async Task<ViewMessage> RenderAsync(CancellationToken cancellationToken)
     {
         var view = _state.Value.State switch
         {
@@ -35,37 +33,38 @@ internal class GiftView : View
         return view;
     }
 
-    private async Task<ViewResult> RenderOpened(CancellationToken cancellationToken)
+    private async Task<ViewMessage> RenderOpened(CancellationToken cancellationToken)
     {
         try
         {
             var url = await _giftService.GetRandomUrlAsync(cancellationToken);
-            var link = new LinkTextToken("\u00AD", url);
+            var link = TextToken.Link("\u00AD", new Uri(url));
 
-            var view = CreateBuilder()
-                .WithText(link).AddTextLine()
-                .AddAction("Вернуть обратно", () => ChangeGiftState(GiftState.Returned));
+            var view = new ViewMessage
+            {
+                Text = link,
+                Actions =
+                {
+                    Action("Вернуть обратно", _ => ChangeGiftState(GiftState.Returned))
+                }
+            };
 
             return view;
         }
         catch
         {
-            return CreateBuilder()
-                .AddTextLine("Не удалось открыть подарок");
+            return "Не удалось открыть подарок";
         }
     }
 
-    private ViewResult RenderReturned()
-    {
-        return CreateBuilder().AddTextLine("Вы вернули подарок");
-    }
+    private ViewMessage RenderReturned() => "Вы вернули подарок";
 
-    private ViewResult RenderClosed()
+    private ViewMessage RenderClosed() => new()
     {
-        var view = CreateBuilder()
-            .AddTextLine("Вам прислали подарок!")
-            .AddAction("Открыть", () => ChangeGiftState(GiftState.Opened));
-
-        return view;
-    }
+        Text = "Вам прислали подарок",
+        Actions =
+        {
+            Action("Открыть", _ => ChangeGiftState(GiftState.Opened))
+        }
+    };
 }
